@@ -43,8 +43,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/og-image.jpg",
-        width: 2560,
-        height: 1440,
+        width: 1230,
+        height: 1278,
         alt: "iPhone 18 Pro — Pro further.",
       },
     ],
