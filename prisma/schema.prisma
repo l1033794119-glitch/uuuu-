@@ -18,7 +18,7 @@ model Registration {
   phone        String
   address      String
   zipcode      String
-  language     String   @default("zh")
+  language     String   @default("en")
   drawsUsed    Int      @default(0)
   drawsMax     Int      @default(10)
   iphoneStreak Int      @default(0)

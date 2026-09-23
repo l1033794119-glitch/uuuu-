@@ -234,7 +234,7 @@ export default function PrizeForm() {
   return (
     <section id="join" className="relative z-10 px-5 py-20">
       <div className="mx-auto max-w-5xl">
-        {/* perks */}
+        {/* Perks */}
         <div className="grid gap-4 sm:grid-cols-3">
           {PERKS.map((p) => (
             <div key={p.titleKey} className="glass rounded-2xl p-5">
@@ -249,7 +249,7 @@ export default function PrizeForm() {
           ))}
         </div>
 
-        {/* 主卡片 */}
+        {/* Main card */}
         <div className="glass-strong mt-8 rounded-3xl p-6 sm:p-8">
           {!registered ? (
             <>

@@ -21,13 +21,12 @@ const LanguageContext = createContext<LanguageContextValue | null>(null);
 
 const STORAGE_KEY = "apple18-event-lang";
 
-// 根据浏览器语言偏好匹配最接近的 Lang
+// Match browser language preference to nearest Lang
 function detectBrowserLang(): Lang {
-  if (typeof navigator === "undefined") return "zh";
+  if (typeof navigator === "undefined") return "en";
   const navLangs = navigator.languages ?? [navigator.language];
   for (const bl of navLangs) {
     const lower = bl.toLowerCase();
-    if (lower.startsWith("zh")) return "zh";
     if (lower.startsWith("vi")) return "vi";
     if (lower.startsWith("en")) return "en";
     if (lower.startsWith("ru")) return "ru";
@@ -42,7 +41,7 @@ function detectBrowserLang(): Lang {
 }
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Lang>("zh");
+  const [lang, setLangState] = useState<Lang>("en");
 
   useEffect(() => {
     try {
@@ -50,7 +49,6 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       if (saved && LANGS.includes(saved)) {
         setLangState(saved);
       } else {
-        // 无本地缓存时跟随浏览器语言
         const detected = detectBrowserLang();
         setLangState(detected);
       }
@@ -58,8 +56,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       const detected = detectBrowserLang();
       setLangState(detected);
     }
-    document.documentElement.lang =
-      lang === "vi" ? "vi" : lang === "en" ? "en" : lang === "ru" ? "ru" : lang === "id" ? "id" : "zh";
+    document.documentElement.lang = lang;
   }, []);
 
   const setLang = useCallback((next: Lang) => {

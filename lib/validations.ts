@@ -30,7 +30,7 @@ export const registerSchema = z.object({
     .trim()
     .min(3, "zipcode_invalid")
     .max(12, "zipcode_invalid"),
-  language: z.enum(["zh", "vi", "en", "ru", "id", "hi", "fil", "uk", "hy", "kk"]).default("zh"),
+  language: z.enum(["vi", "en", "ru", "id", "hi", "fil", "uk", "hy", "kk"]).default("en"),
   agree: z.boolean().refine((v) => v === true, "agree_required"),
 });
 

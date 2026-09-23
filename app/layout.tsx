@@ -15,25 +15,42 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "iPhone 18 Pro 发布会 · 抽奖 & 以旧换新活动",
+  metadataBase: new URL("https://apple18-event.example"),
+  title: "iPhone 18 Pro Event · Lucky Draw & Trade-in",
   description:
-    "观看 Apple Event 2026 发布会视频，提交信息参与 iPhone 18 Pro 抽奖，90% 中奖率，以旧换新额外补贴。",
+    "Watch the Apple Event 2026 video, submit your info to join the iPhone 18 Pro lucky draw. 90% win rate, plus trade-in bonus.",
   keywords: [
     "iPhone 18 Pro",
     "Apple Event 2026",
     "iPhone Duo",
-    "抽奖",
-    "以旧换新",
+    "lucky draw",
+    "trade-in",
     "AirPods 5",
     "Apple Watch Series 12",
   ],
   authors: [{ name: "Event Team" }],
   openGraph: {
-    title: "iPhone 18 Pro 发布会 · 抽奖活动",
+    title: "iPhone 18 Pro Event · Lucky Draw",
     description:
-      "观看 Apple Event 2026 发布会视频，提交信息参与 iPhone 18 Pro 抽奖，90% 中奖率。",
+      "Watch the Apple Event 2026 video, submit your info to join the iPhone 18 Pro lucky draw. 90% win rate.",
     type: "website",
-    locale: "zh_CN",
+    locale: "en_US",
+    siteName: "iPhone 18 Pro Event",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 2560,
+        height: 1440,
+        alt: "iPhone 18 Pro — Pro further.",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "iPhone 18 Pro Event · Lucky Draw",
+    description:
+      "Watch the Apple Event 2026 video, submit your info to join the iPhone 18 Pro lucky draw. 90% win rate.",
+    images: ["/og-image.jpg"],
   },
 };
 
@@ -46,7 +63,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="zh"
+      lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>

@@ -1,9 +1,8 @@
-export type Lang = "zh" | "vi" | "en" | "ru" | "id" | "hi" | "fil" | "uk" | "hy" | "kk";
+export type Lang = "vi" | "en" | "ru" | "id" | "hi" | "fil" | "uk" | "hy" | "kk";
 
-export const LANGS: Lang[] = ["zh", "vi", "en", "ru", "id", "hi", "fil", "uk", "hy", "kk"];
+export const LANGS: Lang[] = ["vi", "en", "ru", "id", "hi", "fil", "uk", "hy", "kk"];
 
 export const LANG_META: Record<Lang, { label: string; short: string }> = {
-  zh: { label: "中文", short: "ZH" },
   vi: { label: "Tiếng Việt", short: "VI" },
   en: { label: "English", short: "EN" },
   ru: { label: "Русский", short: "RU" },
@@ -16,82 +15,6 @@ export const LANG_META: Record<Lang, { label: string; short: string }> = {
 };
 
 type Dict = Record<string, string>;
-
-const zh: Dict = {
-  "brand": "惊喜·绽放",
-  "kicker": "Apple Event · September 9 2026",
-  "title": "iPhone 18 Pro · 重新定义",
-  "subtitle": "全新可折叠 iPhone Duo、iPhone 18 Pro、Apple Watch Series 12 与 AirPods 5 震撼登场。",
-  "watch": "观看发布会",
-  "scroll": "向下滚动参与活动",
-  "perk1Title": "10 次抽奖机会",
-  "perk1Desc": "填写信息即可获得 10 次轮盘抽奖机会。",
-  "perk2Title": "Apple 合作授权专卖店限时活动",
-  "perk2Desc": "官方授权，正品保障，限时优惠。",
-  "perk3Title": "以旧换新",
-  "perk3Desc": "旧机抵扣，再享 $100 额外补贴。",
-  "formTitle": "立即参与抽奖",
-  "formSubtitle": "填写信息，开启你的轮盘抽奖之旅。",
-  "name": "姓名",
-  "namePlaceholder": "请输入您的真实姓名",
-  "email": "邮箱",
-  "emailPlaceholder": "name@example.com",
-  "phone": "电话",
-  "phonePlaceholder": "11 位手机号",
-  "address": "收件地址",
-  "addressPlaceholder": "省 / 市 / 区 / 详细地址",
-  "zipcode": "邮编",
-  "zipcodePlaceholder": "邮政编码",
-  "submit": "开始抽奖",
-  "submitting": "提交中…",
-  "agree": "我已阅读并同意活动规则与隐私政策。",
-  "rulesTitle": "活动规则",
-  "rule1": "每位用户可参与 10 次抽奖。",
-  "rule2": "奖品数量有限，先到先得，送完即止。",
-  "rule3": "中奖后 48 小时内寄出奖品，以旧换新估值以官方检测为准。",
-  "rule4": "抽中以旧换新奖品后，可到指定 Apple 授权专卖店领取购机优惠券及以旧换新补贴券。",
-  "privacy": "隐私政策",
-  "privacy1": "我们仅收集姓名、电话、邮箱、地址等必要信息，用于奖品发放与活动通知。",
-  "privacy2": "您的信息将严格保密，不会用于任何商业用途或未经授权的营销。",
-  "privacy3": "数据采用加密传输与安全存储，活动结束后 90 天内销毁全部个人信息。",
-  "privacy4": "我们承诺不向任何第三方出售、出租或共享您的个人资料。",
-  "privacy5": "如有疑问请联系隐私专员：privacy@example.com",
-  "contact": "联系我们",
-  "copyright": "© 2026 公司活动组 · 本页面为活动宣传用途",
-  "errName": "请填写姓名",
-  "errEmail": "请输入有效的邮箱地址",
-  "errPhone": "请输入有效的手机号",
-  "errAddress": "请填写收件地址",
-  "errZipcode": "请填写有效的邮编",
-  "errAgree": "请先勾选同意条款",
-  "errDuplicate": "该手机号已参与过本次活动",
-  "errServer": "提交失败，请稍后重试",
-  "errNoDraws": "抽奖次数已用完",
-  "winTitle": "恭喜中奖！",
-  "winDesc": "您获得：",
-  "loseTitle": "谢谢参与",
-  "loseDesc": "很遗憾本次未中奖，再接再厉！",
-  "prizeIphone": "iPhone 18 Pro 一台",
-  "prize50off": "5 折购机券一张",
-  "prize90off": "9 折购机券一张",
-  "prizeSubsidy": "以旧换新 $100 补贴",
-  "close": "关闭",
-  "continueDraw": "继续抽奖",
-  "duplicateTitle": "已参与",
-  "duplicateDesc": "您的手机号已成功参与本次活动，请勿重复提交。",
-  "promoStrip": "限时活动 · 即刻锁定 10 次 iPhone 18 Pro 抽奖机会",
-  // 轮盘
-  "wheelTitle": "幸运大转盘",
-  "wheelDesc": "点击下方按钮开始抽奖",
-  "drawBtn": "抽奖",
-  "drawing": "抽奖中…",
-  "drawsLeft": "剩余抽奖次数",
-  "sectorIphone": "iPhone",
-  "sector50off": "5 折券",
-  "sector90off": "9 折券",
-  "sectorSubsidy": "$100 补贴",
-  "sectorNone": "谢谢参与",
-};
 
 const vi: Dict = {
   "brand": "Bất ngờ · Tỏa sáng",
@@ -768,7 +691,7 @@ const kk: Dict = {
   "sectorNone": "Рахмет",
 };
 
-export const DICTS: Record<Lang, Dict> = { zh, vi, en, ru, id, hi, fil, uk, hy, kk };
+export const DICTS: Record<Lang, Dict> = { vi, en, ru, id, hi, fil, uk, hy, kk };
 
 export function t(lang: Lang, key: string): string {
   return DICTS[lang]?.[key] ?? DICTS.en[key] ?? key;

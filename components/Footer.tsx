@@ -39,7 +39,7 @@ export default function Footer() {
         <div className="hairline my-6" />
 
         <p className="text-dim text-[11px] leading-relaxed">
-          {year} · {t("copyright")} · Apple Inc. 与本活动无关
+          {year} · {t("copyright")} · Not affiliated with Apple Inc.
         </p>
       </div>
     </footer>
