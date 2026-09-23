@@ -17,7 +17,7 @@ export const registerSchema = z.object({
   phone: z
     .string()
     .trim()
-    .min(6, "phone_invalid")
+    .min(5, "phone_invalid")
     .max(20, "phone_invalid")
     .regex(/^[+\d][\d\s-]{4,19}$/, "phone_invalid"),
   address: z
