@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   title: "iPhone 18 Pro Event · Lucky Draw & Trade-in",
   description:
-    "Watch the Apple Event 2026 video, submit your info to join the iPhone 18 Pro lucky draw. 90% win rate, plus trade-in bonus.",
+    "Đổi máy chẳng đắn đo, may mắn thêm mượt mà. Trợ giá đổi máy cực cao kết hợp bốc thăm giới hạn, mang về cuộc sống cao cấp kế tiếp. Máy cũ thành máy mới, may mắn không chỉ 'một' chút! Tham gia đổi cũ lấy mới, cơ hội trúng miễn phí một trong ba mẫu iPhone 18 Pro và Pro Max. Tái tạo kinh điển, may mắn nhân đôi! Dùng iPhone cũ đổi máy mới, đồng thời có cơ hội trúng miễn đơn toàn bộ!",
   keywords: [
     "iPhone 18 Pro",
     "Apple Event 2026",
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "iPhone 18 Pro Event · Lucky Draw",
     description:
-      "Watch the Apple Event 2026 video, submit your info to join the iPhone 18 Pro lucky draw. 90% win rate.",
+      "Đổi máy chẳng đắn đo, may mắn thêm mượt mà. Trợ giá đổi máy cực cao kết hợp bốc thăm giới hạn, mang về cuộc sống cao cấp kế tiếp. Máy cũ thành máy mới, may mắn không chỉ 'một' chút! Tham gia đổi cũ lấy mới, cơ hội trúng miễn phí iPhone 18 Pro và Pro Max. Tái tạo kinh điển, may mắn nhân đôi!",
     type: "website",
-    locale: "en_US",
+    locale: "vi_VN",
     siteName: "iPhone 18 Pro Event",
     images: [
       {
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "iPhone 18 Pro Event · Lucky Draw",
     description:
-      "Watch the Apple Event 2026 video, submit your info to join the iPhone 18 Pro lucky draw. 90% win rate.",
+      "Đổi máy chẳng đắn đo, may mắn thêm mượt mà. Trợ giá đổi máy cực cao kết hợp bốc thăm giới hạn, may mắn nhân đôi! Tham gia đổi cũ lấy mới, cơ hội trúng miễn phí iPhone 18 Pro và Pro Max.",
     images: ["/og-image.jpg"],
   },
 };
