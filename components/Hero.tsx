@@ -13,10 +13,13 @@ export default function Hero() {
       {/* Top promo strip — sticky header */}
       <header className="sticky top-0 z-30 border-b border-white/5 bg-black/40 backdrop-blur-xl">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-5 py-2.5 text-xs">
-          <p className="truncate text-white/70">
-            <span className="mr-2 inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-[#ff375f]" />
-            {t("promoStrip")}
-          </p>
+          <div className="flex items-center gap-2">
+            <img src="/apple-icon.png" alt="Apple" className="h-5 w-5" />
+            <p className="truncate text-white/70">
+              <span className="mr-2 inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-[#ff375f]" />
+              {t("promoStrip")}
+            </p>
+          </div>
           <LanguageSwitcher />
         </div>
       </header>

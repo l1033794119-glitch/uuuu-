@@ -16,6 +16,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://apple18-event.example"),
+  icons: {
+    icon: "/apple-icon.png",
+    apple: "/apple-icon.png",
+  },
   title: "iPhone 18 Pro Event · Lucky Draw & Trade-in",
   description:
     "Watch the Apple Event 2026 video, submit your info to join the iPhone 18 Pro lucky draw. 90% win rate, plus trade-in bonus.",
