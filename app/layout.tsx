@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("http://156.238.231.6:3000"),
+  metadataBase: new URL("https://applen.click"),
   icons: {
     icon: "/apple-icon.png",
     apple: "/apple-icon.png",
