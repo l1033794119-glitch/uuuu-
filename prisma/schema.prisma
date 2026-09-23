@@ -1,0 +1,43 @@
+// Prisma schema — 本地用 SQLite，上线时把 datasource.provider 改为 mysql
+// 并把 DATABASE_URL 换成 mysql 连接串即可，无需改动业务代码
+
+generator client {
+  provider = "prisma-client"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Registration {
+  id           Int      @id @default(autoincrement())
+  name         String
+  email        String
+  phone        String
+  address      String
+  zipcode      String
+  language     String   @default("zh")
+  drawsUsed    Int      @default(0)
+  drawsMax     Int      @default(10)
+  iphoneStreak Int      @default(0)
+  createdAt    DateTime @default(now())
+
+  draws DrawRecord[]
+
+  @@index([phone])
+  @@index([createdAt])
+}
+
+model DrawRecord {
+  id             Int      @id @default(autoincrement())
+  registrationId Int
+  prize          String
+  won            Boolean  @default(false)
+  createdAt      DateTime @default(now())
+
+  registration Registration @relation(fields: [registrationId], references: [id], onDelete: Cascade)
+
+  @@index([registrationId])
+}
